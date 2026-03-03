@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // Fallback all other GET requests to the React SPA index.html
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
